@@ -1,0 +1,185 @@
+
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,hugo,visualstudiocode,yarn,git,hexo,linux,sublimetext,webstorm+all,webstorm
+
+### Git ###
+# 由GIT创建用于备份。要在Git中禁用备份，请执行以下操作: git config --global mergetool.keepBackup false
+*.orig
+
+# 在使用合并工具解决冲突时由Git创建
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### Hexo ###
+db.json
+public/
+.deploy_git/
+
+### Hugo ###
+# hugo 生成的文件
+/public/
+/resources/_gen/
+themes/LoveIt/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+node_modules/
+
+# 可以将可执行文件添加到存储库
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# 构建过程中的临时锁定文件
+/.hugo_build.lock
+
+### MarkEditor ###
+*/.markeditor/
+.markeditor/
+content/configs/
+content/.auto_links.json
+content/.icon.png
+temp/
+.Archive
+.sync
+markdownlint.ignore
+
+### Linux ###
+*~
+
+# 临时文件，如果进程仍然打开已删除文件的句柄，则会创建该临时文件
+.fuse_hidden*
+
+# KDE 目录首选项
+.directory
+
+# Linux 中 可能出现在任何分区或磁盘上的垃圾文件夹
+.Trash-*
+
+# .nfs 文件 是在打开的文件被删除但仍在被访问时创建
+.nfs*
+
+# vim 编辑时产生的文件
+*.swp
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 图标必须以两个 \r 结尾
+Icon
+
+
+# 缩略图
+._*
+
+# 可能出现在卷的根目录中的文件
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# 可能在远程AFP共享上创建的目录
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# 项目文件应检入存储库，除非很大一部分贡献者可能不会使用 SublimeText
+*.sublime-project
+
+# SFTP 配置文件
+sftp-config.json
+sftp-config-alt*.json
+
+# Package 控制特定文件
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Visual Studio Code 的本地历史记录
+.history/
+
+# 由 Visual Studio Code 扩展创建
+*.vsix
+
+### VisualStudioCode Patch ###
+# 忽略所有本地文件历史记录
+.history
+.ionide
+
+### IDE misc ###
+# 
+/idea
+.idea/
+.idea/*
+out/
+.idea_modules/
+!.idea/codeStyles
+!.idea/runConfigurations
+*.iml
+*.ipr
+*.iws
+
+### Windows ###
+# Windows 缩略图缓存文件
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# 转储文件
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows 安装程序文件
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows 快捷方式
+*.lnk
+
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+

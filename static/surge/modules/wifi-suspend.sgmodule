@@ -1,0 +1,12 @@
+#!name=WiFi Suspend
+
+#!desc=Surge 挂起
+
+#!icon=https://archiguru.io/surge/img/antgroup.png
+
+#!author=ArchiGuru
+
+[SSID Setting]
+antgroup-inc suspend=true
+alibaba-inc suspend=true
+alibaba-guest suspend=true

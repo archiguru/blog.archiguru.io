@@ -1,0 +1,37 @@
+name: Auto Sync Themes
+run-name: 自动更新主题-${{ github.run_id }}
+on:
+  # 手动触发
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  Auto-Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 克隆 ArchiGuru
+        uses: actions/checkout@v4
+      - name: 【run】删除旧文件
+        run: |
+          rm -rf themes/LoveIt
+      - name: 克隆 LoveIt
+        uses: actions/checkout@v4
+        with:
+          repository: dillonzq/LoveIt
+          path: themes/LoveIt
+      - name: 【run】删除git无用文件
+        run: |
+          rm -rf themes/LoveIt/.git
+          rm -rf themes/LoveIt/.circleci
+          rm -rf themes/LoveIt/.github
+          rm -rf themes/LoveIt/.husky
+          rm -rf themes/LoveIt/.gitignore
+          rm -rf themes/LoveIt/exampleSite
+          rm -rf themes/LoveIt/README.md
+          mv -f themes/LoveIt/README.zh-cn.md themes/LoveIt/README.md
+      - name: 自动提交并推送已同步文件
+        run: |
+          bash ./bin/auto_sync_theme.sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

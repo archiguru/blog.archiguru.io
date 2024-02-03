@@ -1,0 +1,435 @@
+baseURL = "https://archiguru.io"
+theme = "LoveIt"
+title = "ArchiGuru - The sooner you start to code, the longer the program will take"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+languageName = "简体中文"
+hasCJKLanguage = true
+paginate = 25
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+[author]
+  name = "ArchiGuru"
+  email = "jonny0624@gmail.com"
+  link = "https://github.com/archiguru"
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "home"
+    pre = "🏡"
+    post = " "
+    name = " 首页"
+    url = "/"
+    title = "ArchiGuru - 首页"
+  [[menu.main]]
+    weight = 2
+    identifier = "section"
+    pre = "<i class='fas fa-archive fa-fw'></i>"
+    post = " "
+    name = " 文章"
+    url = "/posts/"
+    title = "ArchiGuru - 所有文章"
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    pre = "<i class='fa-brands fa-perbyte'></i>"
+    post = " "
+    name = " 分类"
+    url = "/categories/"
+    title = "ArchiGuru - 文章分类"
+  [[menu.main]]
+    weight = 4
+    identifier = "tags"
+    pre = "<i class='fa-brands fa-twitch'></i>"
+    post = " "
+    name = " 标签"
+    url = "/tags/"
+    title = "文章标签"
+  [[menu.main]]
+    weight = 5
+    identifier = "bookmark"
+    pre = "<i class='fa-brands fa-mizuni'></i>"
+    post = " "
+    name = " 书签"
+    url = "/pages/bookmark/"
+    title = "ArchiGuru - 常用书签"
+  [[menu.main]]
+    weight = 6
+    identifier = "about"
+    pre = "<i class='fa-regular fa-address-card'></i>"
+    post = " "
+    name = " 关于"
+    url = "/about/"
+    title = "ArchiGuru - 关于|Ablout"
+  [[menu.main]]
+    weight = 9
+    identifier = "more"
+    pre = "<i class='fa-brands fa-dailymotion'></i>"
+    post = " "
+    name = " 更多"
+    url = "/pages/more/"
+    title = "ArchiGuru - 更多内容"
+[params]
+  defaultTheme = "dark"
+  gitRepo = "https://github.com/archiguru/archiguru"
+  fingerprint = "sha256"
+  dateFormat = "2006年01月02日"
+  title = "ArchiGuru"
+  description = "ArchiGuru|Jonny.Chang|个人博客|架构师"
+  images = ["/logo.svg"]
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = "/archiguru-logo.png"
+      name = "ArchiGuru"
+      pre = ""
+      post = ""
+      typeit = false
+  [params.footer]
+    enable = true
+    custom = ""
+    hugo = false
+    copyright = true
+    author = true
+    since = 2014
+    icp = "<a href='http://beian.miit.gov.cn/'; target=_blank>浙ICP备18052140号</a>"
+    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">ArchiGuru, Inc.</a>'
+  [params.section]
+    paginate = 25
+    dateFormat = "01月02日"
+    rss = 9999
+  [params.list]
+    paginate = 25
+    dateFormat = "01月02日"
+    rss = 9999
+  [params.app]
+    title = "ArchiGuru"
+    noFavicon = false
+    svgFavicon = "logo.svg"
+    themeColor = "#ffffff"
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+  [params.search]
+    enable = true
+    type = "algolia"
+    contentLength = 8000
+    placeholder = "搜索本站"
+    maxResultLength = 20
+    snippetLength = 72
+    highlightTag = "em"
+    absoluteURL = false
+    [params.search.algolia]
+      index = "index.zh-cn"
+      appID = "PASDMWALPK"
+      searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+  [params.home]
+    rss = 9999
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = "/images/head_image.png"
+      title = "ArchiGuru"
+      subtitle = "Although I still love Java, it's not my intention to fall in love with other technology stack, but I can't choose ..."
+      typeit = true
+      social = true
+      disclaimer = "<p>The content published by the <b>ArchiGuru</b> does not guarantee absolute correctness, and the risks associated with using the content of this site have nothing to do with this site. If there is any infringement in this website, please contact the author and delete it.</p>"
+    [params.home.posts]
+      enable = true
+      paginate = 20
+  [params.social]
+    GitHub = "archiguru"
+    Telegram = "archiguru"
+    Email = "jonny6015@icloud.com"
+    RSS = true
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = true
+    lightgallery = true
+    ruby = true
+    fraction = true
+    fontawesome = true
+    linkToMarkdown = true
+    rssFullText = true
+    [params.page.toc]
+      enable = true
+      keepStatic = true
+      auto = true
+    [params.page.code]
+      copy = true
+      maxShownLines = 30
+    [params.page.math]
+      enable = false
+    [params.page.mapbox]
+      accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      navigation = true
+      geolocate = true
+      scale = true
+      fullscreen = true
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Line = true
+      Pocket = true
+      Flipboard = true
+      Weibo = true
+    [params.page.comment]
+      enable = false
+  [params.typeit]
+    speed = 200
+    cursorSpeed = 500
+    cursorChar = "|"
+    duration = -1
+  [params.seo]
+    image = "/images/Apple-Devices-Preview.png"
+    thumbnailUrl = "/images/screenshot.png"
+  [params.cookieconsent]
+    enable = true
+    [params.cookieconsent.content]
+      message = "我们使用 Cookies 来个性化内容和广告，提供社交媒体功能，并分析我们的流量。我们还与我们的社交媒体、广告和分析合作伙伴共享有关您使用我们网站的信息。点击 [同意] 表示您授权我们按照我们的[Cookie政策]使用所有cookie。如果您不同意，请点击 [设置] 进行自定义选择。"
+      dismiss = ""
+      link = ""
+  [params.compatibility]
+    polyfill = false
+    objectFit = false
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.8
+[Permalinks]
+  posts = ":year/:month/:filename"
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+[languages]
+  [languages.zh-cn]
+    weight = 1
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    hasCJKLanguage = true
+    copyright = "本作品采用知识共享署名-非商业性 4.0 国际许可。"
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        weight = 1
+        identifier = "home"
+        pre = "🏡"
+        post = " "
+        name = " 首页"
+        url = "/"
+        title = "ArchiGuru - 首页"
+      [[languages.zh-cn.menu.main]]
+        weight = 2
+        identifier = "section"
+        pre = "<i class='fas fa-archive fa-fw'></i>"
+        post = " "
+        name = " 文章"
+        url = "/posts/"
+        title = "ArchiGuru - 所有文章"
+      [[languages.zh-cn.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = "<i class='fa-brands fa-perbyte'></i>"
+        post = " "
+        name = " 分类"
+        url = "/categories/"
+        title = "ArchiGuru - 文章分类"
+      [[languages.zh-cn.menu.main]]
+        weight = 4
+        identifier = "tags"
+        pre = "<i class='fa-brands fa-twitch'></i>"
+        post = " "
+        name = " 标签"
+        url = "/tags/"
+        title = "文章标签"
+      [[languages.zh-cn.menu.main]]
+        weight = 5
+        identifier = "bookmark"
+        pre = "<i class='fa-brands fa-mizuni'></i>"
+        post = " "
+        name = " 书签"
+        url = "/pages/bookmark/"
+        title = "ArchiGuru - 常用书签"
+      [[languages.zh-cn.menu.main]]
+        weight = 6
+        identifier = "about"
+        pre = "<i class='fa-regular fa-address-card'></i>"
+        post = " "
+        name = " 关于"
+        url = "/about/"
+        title = "ArchiGuru - 关于|Ablout"
+      [[languages.zh-cn.menu.main]]
+        weight = 9
+        identifier = "more"
+        pre = "<i class='fa-brands fa-dailymotion'></i>"
+        post = " "
+        name = " 更多"
+        url = "/pages/more/"
+        title = "ArchiGuru - 更多内容"
+
+    [languages.zh-cn.params]
+      [languages.zh-cn.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 8000
+        placeholder = "搜索本站"
+        maxResultLength = 20
+        snippetLength = 72
+        highlightTag = "em"
+        absoluteURL = false
+        [languages.zh-cn.params.search.algolia]
+          index = "index.zh-cn"
+          appID = "PASDMWALPK"
+          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+      [languages.zh-cn.params.home]
+        rss = 9999
+        [languages.zh-cn.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/head_image.png"
+          title = "ArchiGuru"
+          subtitle = "虽然我依旧热爱 Java，爱上其他技术栈并不是我的本意，但我无法选择 ... "
+          typeit = true
+          social = true
+          disclaimer = "<p>The content published by the <b>ArchiGuru</b> does not guarantee absolute correctness, and the risks associated with using the content of this site have nothing to do with this site. If there is any infringement in this website, please contact the author and delete it.</p>"
+      [languages.zh-cn.params.social]
+        GitHub = "archiguru"
+        Email = "jonny6015@icloud.com"
+        RSS = true
+  [languages.en]
+    weight = 2
+    languageCode = "en"
+    languageName = "English"
+    hasCJKLanguage = false
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        weight = 1
+        identifier = "home"
+        pre = "🏡"
+        post = " "
+        name = " Home"
+        url = "/"
+        title = "ArchiGuru - Home"
+      [[languages.en.menu.main]]
+        weight = 2
+        identifier = "section"
+        pre = "<i class='fas fa-archive fa-fw'></i>"
+        post = " "
+        name = " Articles"
+        url = "/posts/"
+        title = "ArchiGuru - All Articles"
+      [[languages.en.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = "<i class='fa-brands fa-perbyte'></i>"
+        post = " "
+        name = " Categories"
+        url = "/categories/"
+        title = "ArchiGuru - Categories"
+      [[languages.en.menu.main]]
+        weight = 4
+        identifier = "tags"
+        pre = "<i class='fa-brands fa-twitch'></i>"
+        post = " "
+        name = " Tags"
+        url = "/tags/"
+        title = "Tags"
+      [[languages.en.menu.main]]
+        weight = 5
+        identifier = "bookmark"
+        pre = "<i class='fa-brands fa-mizuni'></i>"
+        post = " "
+        name = " Bookmarks"
+        url = "/pages/bookmark/"
+        title = "ArchiGuru - Bookmarks"
+      [[languages.en.menu.main]]
+        weight = 6
+        identifier = "about"
+        pre = "<i class='fa-regular fa-address-card'></i>"
+        post = " "
+        name = " About"
+        url = "/about/"
+        title = "ArchiGuru - Ablout"
+      [[languages.en.menu.main]]
+        weight = 9
+        identifier = "more"
+        pre = "<i class='fa-brands fa-dailymotion'></i>"
+        post = " "
+        name = " More"
+        url = "/pages/more/"
+        title = "ArchiGuru - More"
+    [languages.en.params]
+      [languages.en.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 8000
+        placeholder = "Sesarch"
+        maxResultLength = 20
+        snippetLength = 72
+        highlightTag = "em"
+        absoluteURL = false
+        [languages.en.params.search.algolia]
+          index = "index.en"
+          appID = "PASDMWALPK"
+          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+      [languages.en.params.home]
+        rss = 9999
+        [languages.en.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/head_image.png"
+          title = "ArchiGuru"
+          subtitle = "Although I still love Java, it's not my intention to fall in love with other technology stack, but I can't choose ..."
+          typeit = true
+          social = true
+          disclaimer = "<p>The content published by the <b>ArchiGuru</b> does not guarantee absolute correctness, and the risks associated with using the content of this site have nothing to do with this site. If there is any infringement in this website, please contact the author and delete it.</p>"
+      [languages.en.params.social]
+        GitHub = "archiguru"
+        Telegram = "archiguru"
+        Email = "jonny6015@icloud.com"
+        RSS = true

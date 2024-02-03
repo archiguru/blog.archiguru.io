@@ -1,0 +1,29 @@
+{
+  "name": "ArchiGuru",
+  "description": "Jonny.Chang's Blog.",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "update": "bash ./update.sh",
+    "md-deploy": "bash ./scripts/update-markedit.sh",
+    "clean": "bash ./scripts/clean-git-history.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archiguru/ArchiGuru.git"
+  },
+  "keywords": [
+    "Jonny",
+    "JonnyChang",
+    "Blog"
+  ],
+  "author": "Jonny.Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archiguru/ArchiGuru/issues"
+  },
+  "homepage": "https://github.com/archiguru/ArchiGuru#readme",
+  "dependencies": {
+  }
+}

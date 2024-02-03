@@ -1,0 +1,255 @@
+"{{{ ********* 基本设置 *********
+set nocompatible   " 设置Vim兼容模式
+syntax on          " 开启语法高亮
+filetype off       " 关闭文件类型检测以防止插件加载两次
+" 基本设置
+set nocompatible   " 设置Vim兼容模式
+syntax on          " 开启语法高亮
+filetype off       " 关闭文件类型检测以防止插件加载两次
+set encoding=utf-8 " 设置内部使用编码为 UTF-8
+
+" 文件编码设置
+" 设置文件编码检测顺序
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8                      " 设置文件默认编码
+set fencs=utf8,gbk,gb2312,gb18030 " 设置支持的文件编码
+
+" 界面交互设置
+set mouse=a               " 启用鼠标支持
+set clipboard=unnamedplus " 使用系统剪贴板
+set history=1000          " 命令历史记录数目
+set undolevels=1000       " 可撤销的操作数目
+set backspace=indent,eol,start " 设置退格键可以删除的内容
+" ******************}}}
+
+"{{{ ********* 插件列表 *********
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " 强大的语言服务平台
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " Go 语言开发插件
+Plug 'vim-airline/vim-airline-themes' " 状态栏主题
+Plug 'vim-autoformat/vim-autoformat'  " 一键代码格式化
+Plug 'airblade/vim-gitgutter'         " Git 差异标记
+Plug 'vim-airline/vim-airline'        " 状态栏美化
+Plug 'skywind3000/vim-rt-format'      " 实时格式化
+Plug 'whatyouhide/vim-gotham'         " Gotham 主题
+Plug 'morhetz/gruvbox'      " 配色方案
+Plug 'Yggdroot/LeaderF'     " 模糊搜索工具
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " 命令行模糊查找
+Plug 'junegunn/fzf.vim'     " fzf 的 Vim 集成
+Plug 'tpope/vim-commentary' " 快速注释工具
+Plug 'tpope/vim-fugitive'   " Git 集成
+Plug 'tpope/vim-surround'   " 配对符号编辑
+Plug 'preservim/nerdtree'   " 文件浏览器
+Plug 'jiangmiao/auto-pairs' " 括号自动补全
+Plug 'Yggdroot/indentLine'  " 缩进级别显示
+Plug 'godlygeek/tabular'    " 文本对齐
+Plug 'dense-analysis/ale'   " 异步 linter
+call plug#end()
+" ******************}}}
+
+"{{{ ********* 插件设置 *********
+" 在Vim中使用 fzf
+set rtp+=/opt/homebrew/opt/fzf
+" 界面与主题设置
+colorscheme gotham                 " 配色方案
+let g:airline_powerline_fonts = 1  " 使用 Powerline 字体
+let g:airline_theme='hybrid'       " 状态栏主题 [bubblegum|deus|monochrome|zenburn|hybrid]
+let g:airline#extensions#tabline#enabled = 1  " 启用标签栏
+" 文件浏览与管理
+let NERDTreeShowHidden=1 " 显示隐藏文件
+let NERDTreeMinimalUI=1  " 最小化 UI
+let NERDTreeDirArrows=1  " 目录树箭头
+let g:netrw_liststyle=3  " 网络列表样式
+" Git 集成设置 禁用 GitGutter 快捷键
+let g:gitgutter_map_keys = 0
+" 代码格式化与语法检查
+let g:ale_lint_on_enter = 0              " 不进入时进行 lint
+let g:ale_lint_on_save = 1               " 保存时进行 lint
+let g:ale_lint_on_text_changed = 'never' " 文本更改时不 lint
+let g:ale_fix_on_save = 1                " 保存时自动修复
+let g:autoformat_verbosemode=1           " 格式化详细模式
+let g:autoformat_autoindent=1            " 格式化时自动纠正缩进
+" 安装的 coc 插件列表
+let g:coc_global_extensions = [ 'coc-json', 'coc-vimlsp', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-pyright', 'coc-go', 'coc-java', 'coc-vetur', 'coc-git', 'coc-phpls', 'coc-clangd', 'coc-lua', 'coc-rust-analyzer', 'coc-yaml', 'coc-emmet', 'coc-solargraph', 'coc-prettier', 'coc-eslint', 'coc-snippets', 'coc-explorer', 'coc-markdownlint', 'coc-highlight', 'coc-sh', 'coc-sql' ]
+" 实时格式化设置
+let g:rtf_ctrl_enter = 1      " 启用实时格式化快捷键
+let g:rtf_on_insert_leave = 1 " 离开插入模式时实时格式化
+" LeaderF 设置
+let g:Lf_WindowPosition = 'popup' " LeaderF 的搜索窗口位置为 popup 模式
+let g:Lf_PreviewInPopup = 1       " 使 LeaderF 的文件预览功能在一个弹出窗口中显示
+let g:Lf_DefaultExternal = 'rg'   " 设置 LeaderF 使用 rg（Ripgrep）作为默认的外部搜索工具。
+" ******************}}}
+
+"{{{ ********* 自动命令 *********
+" 当打开 .vimrc 文件时，设置折叠标记
+autocmd BufRead,BufNewFile .vimrc setlocal foldmethod=marker foldmarker={{{,}}}
+" 打开 .vimrc 文件时 自动折叠所有
+autocmd BufWinEnter *.vimrc setlocal foldmethod=manual | normal zM
+" 针对特定文件类型的自动格式化行为
+autocmd BufWrite *.sql,*.c,*.py,*.java,*.js,*.json,*.sh,*.yaml :Autoformat
+autocmd FileType vim,tex let b:autoformat_autoindent=0 " Vim 和 TeX 文件关闭自动缩进调整
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" ******************}}}
+
+"{{{ ********* 高级函数 *********
+autocmd BufNewFile *.c,*.cpp,*.sh,*.py,*.go,*.java exec ":call SetTitle()"
+"定义函数SetTitle，自动插入文件头
+func SetTitle()
+    "如果文件类型为.c或者.cpp文件
+    if (&filetype == 'c' || &filetype == 'cpp')
+        call setline(1, "/******************************************")
+        call setline(2, "\ @Author: 张向阳")
+        call setline(3, "\ @Created Time :" .strftime("%Y-%m-%d %H:%M"))
+        call setline(4, "\ @File Name: ".expand("%"))
+        call setline(5, "\ @Description:")
+        call setline(6, " ******************************************/")
+        call setline(7, "")
+    endif
+    "如果文件类型为.sh文件
+    if &filetype == 'sh'
+        call setline(1, "\#!/bin/sh")
+        call setline(2, "##########################################")
+        call setline(3, "\# Author: 张向阳")
+        call setline(4, "\# Created Time :" .strftime("%Y-%m-%d %H:%M"))
+        call setline(5, "\# File Name: ".expand("%"))
+        call setline(6, "\# Description: ")
+        call setline(7, "##########################################")
+        call setline(8, "")
+    endif
+    "如果文件类型为.py文件
+    if &filetype == 'python'
+        call setline(1, "\# ! /usr/bin/env python3")
+        call setline(2, "\# -*- coding: utf-8 -*-")
+        call setline(3, "\"\"\"Docstring")
+        call setline(4, "")
+        call setline(5, "\"\"\"")
+        call setline(6, "")
+        call setline(7, "__author__ = \"张向阳\"")
+        call setline(8, "__license__ = \"MIT License\"")
+        call setline(9, "__version__ = \"0.0.1\"")
+        call setline(10, "__maintainer__ = \"张向阳\"")
+        call setline(11, "")
+    endif
+    "如果文件类型为.java文件
+    if &filetype == 'java'
+        call setline(1, "/**")
+        call setline(2, " *@author 张向阳")
+        call setline(3, " *@version ".expand("%:t").", v0.1 ".strftime("%Y-%m-%d %H:%M")." 张向阳")
+        call setline(4, " */")
+        call setline(5, "")
+    endif
+endfunc
+" 自动将光标移动到文件末尾
+autocmd BufNewfile * normal G
+" ******************}}}
+
+"{{{ ********* 常规设置 *********
+" cscope 设置
+set cscopetag                " 使用 cscope 替代 tag
+set cscopeprg=gtags-cscope   " 设置 cscope 程序
+cs add GTAGS                 " 添加 cscope 数据库
+" C/C++ 文件保存前自动格式化
+autocmd FileType c,cpp autocmd BufWritePre * :Autoformat
+" 恢复上次编辑位置
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+" 文件类型检测、插件和缩进相关的设置应该放在最后
+filetype plugin indent on
+" 文件格式化选项，不自动插入注释
+set fo-=r
+" 缩进与对齐
+set autoindent              " 自动缩进
+set smartindent             " 智能缩进
+set tabstop=4               " 制表符宽度
+set shiftwidth=4            " 缩进宽度
+set expandtab               " 将制表符转换为空格
+set smarttab                " 智能制表符行为
+let g:indentLine_char = '┊' " 缩进线符号
+let g:indentLine_faster = 1 " 加速缩进线显示
+" 搜索设置
+set incsearch               " 增量搜索
+set ignorecase              " 搜索忽略大小写
+set smartcase               " 搜索时大小写智能判断
+" 状态显示与行为
+set number                  " 显示行号
+set relativenumber          " 显示相对行号
+set cursorline              " 高亮当前行
+set showmatch               " 高亮匹配的括号
+set foldmethod=indent       " 使用缩进折叠
+set foldlevel=99            " 默认展开折叠
+set viewoptions+=folds      " 保存折叠状态
+set ruler                   " 显示光标位置
+set wildmenu                " 命令行自动补全界面
+set laststatus=2            " 总是显示状态栏
+set showcmd                 " 显示命令输入
+" 文件备份与撤销
+set nobackup                " 不创建备份文件
+set nowritebackup           " 写入时不创建备份
+set noswapfile              " 不创建交换文件
+" ******************}}}
+
+"{{{ ********* 自定义快捷键 *********
+" 设置Leader键为逗号
+let mapleader=','
+" 文件和窗口操作
+nnoremap <leader>w :w!<cr>    " 保存文件（强制）
+nnoremap <leader>q :q!<cr>    " 退出当前窗口（强制）
+nnoremap <leader>x :x!<cr>    " 保存并关闭文件（强制）
+nnoremap <c-s> :w<CR>         " 使用Ctrl-S保存文件
+inoremap <c-s> <Esc>:w<CR>a   " 在插入模式下使用Ctrl-S保存后继续编辑
+vnoremap <c-s> <Esc>:w<CR>    " 在可视模式下使用Ctrl-S保存文件
+" LeaderF 插件相关
+nnoremap <silent> <leader>f :Leaderf file<CR>     " 打开Leaderf文件搜索
+nnoremap <silent> <leader>F :LeaderfFunction<CR>  " 打开Leaderf函数搜索
+nnoremap <silent> <leader>rg :Leaderf rg<CR>      " 打开Leaderf的Ripgrep搜索
+" 格式化与编辑
+nnoremap <Leader>fmt :%s/\s\+$//e<CR>gg=G  " 删除尾随空格并重新格式化整个文件
+nnoremap <Space> za                        " 空格键打开或关闭折叠
+" 代码补全与导航 (使用CoC插件)
+inoremap <expr> <C-J> pumvisible() ? "\<PageDown>\<C-N>\<C-P>" : "\<C-X><C-O>"  " 在补全列表中向下翻页
+inoremap <expr> <C-K> pumvisible() ? "\<PageUp>\<C-P>\<C-N>" : "\<C-K>"         " 在补全列表中向上翻页
+inoremap <expr> <C-U> pumvisible() ? "\<C-E>" : "\<C-U>" " 补全列表取消或删除至行首
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"   " 智能回车补全
+nmap <silent> [g <Plug>(coc-diagnostic-prev)             " 跳至上一个问题或诊断
+nmap <silent> ]g <Plug>(coc-diagnostic-next)             " 跳至下一个问题或诊断
+nmap <silent> gd <Plug>(coc-definition)                  " 转到定义
+nmap <silent> gy <Plug>(coc-type-definition)             " 转到类型定义
+nmap <silent> gi <Plug>(coc-implementation)              " 转到实现
+nmap <silent> gr <Plug>(coc-references)                  " 查找引用
+
+""" 补全列表快捷键映射
+" 如果补全列表可见，则按回车键选中当前项，否则插入换行
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+" 如果补全列表可见，则按Tab键向下选择，否则插入制表符
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" 如果补全列表可见，则按Shift-Tab键向上选择，否则插入Shift-Tab
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" 使用Tab键触发补全，并在有字符时导航(注意：在添加此映射前，使用命令 `:verbose imap <Tab>` 确保Tab键没有被其他插件映射)
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
+" 检查光标前是否为空白字符的函数
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" 普通模式下回车插入新行并返回普通模式
+nmap <CR> o<Esc>
+" 在插入模式下Ctrl-D删除当前行并继续编辑
+imap <c-d> <esc>ddi
+" ******************}}}
+
+"{{{ ********* 其他设置 *********
+" 设置 vim 终端颜色支持真彩模式
+if has("termguicolors")
+    set t_8f=[38;2;%lu;%lu;%lum
+    set t_8b=[48;2;%lu;%lu;%lum
+    set termguicolors
+endif
+" ******************}}}
+
+" 结尾留有一个空行避免 vim 在读取文件时出错

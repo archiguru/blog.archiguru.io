@@ -1,0 +1,36 @@
+# link: https://archiguru.io
+# author: Jonny.Chang <jonny0624@gmail.com>
+name: Auto Publish Blog Site.
+
+# 只有推送到 master 才自动化
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.96.0'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
