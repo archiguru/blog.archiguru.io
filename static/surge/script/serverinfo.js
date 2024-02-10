@@ -45,7 +45,7 @@ argument = url=http://127.0.0.1:7122&name=Server Info&icon=bolt.horizontal.iclou
   console.log('error: ' + e);
   $done({
     title: 'Error',
-    content: `完蛋了，出错啦！看看是不是端口没打开？${e}`,
+    content: `获取数据失败，请检查地址和端口！${e}`,
     icon: 'error',
     'icon-color': '#f44336'
   });
@@ -53,7 +53,7 @@ argument = url=http://127.0.0.1:7122&name=Server Info&icon=bolt.horizontal.iclou
 
 function httpAPI(path = '') {
   let headers = {
-    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/93.0.4577.63 Mobile/15E148 Safari/604.1 EdgiOS/46.7.4.1'
+    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Mobile/15E148 Safari/604.1'
   };
   return new Promise((resolve, reject) => {
     $httpClient.get({
@@ -86,13 +86,13 @@ var hours = Math.floor((seconds % (3600 * 24)) / 3600);
 var minutes = Math.floor((seconds % 3600) / 60);
 var result = '';
 if (days > 0) {
-  result += days + ' day' + (days > 1 ? 's' : '') + ', ';
+  result += days + ' 天' + (days > 1 ? 's' : '') + ', ';
 }
 if (hours > 0) {
-  result += hours + ' hour' + (hours > 1 ? 's' : '') + ' ';
+  result += hours + ' 时' + (hours > 1 ? 's' : '') + ' ';
 }
 if (minutes > 0 || result === '') {
-  result += minutes + ' min' + (minutes > 1 ? 's' : '');
+  result += minutes + ' 分' + (minutes > 1 ? 's' : '');
 }
 return result;
 }
