@@ -89,13 +89,13 @@ var hours = Math.floor((seconds % (3600 * 24)) / 3600);
 var minutes = Math.floor((seconds % 3600) / 60);
 var result = '';
 if (days > 0) {
-  result += days + ' 天' + (days > 1 ? 's' : '') + ', ';
+  result += days + ' 天' + '-';
 }
 if (hours > 0) {
-  result += hours + ' 时' + (hours > 1 ? 's' : '') + ' ';
+  result += hours + ' 时' + '-';
 }
 if (minutes > 0 || result === '') {
-  result += minutes + ' 分' + (minutes > 1 ? 's' : '');
+  result += minutes + ' 分';
 }
 return result;
 }
