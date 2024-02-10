@@ -34,11 +34,14 @@ argument = url=http://127.0.0.1:7122&name=Server Info&icon=bolt.horizontal.iclou
   panel.title = params.name || 'Server Info';
   panel.icon = params.icon || 'bolt.horizontal.icloud.fill';
   panel["icon-color"] = shifts[col];
-  panel.content = `负载:${cpuUsage} | 内存:${memUsage}\n` +
-    `接收: ${bytesToSize(outTraffic)} | 发送: ${bytesToSize(inTraffic)}\n` +
-    `总流量: ${trafficSize}\n` +
-    `更新时间: ${formatUptime(jsonData.uptime)}\n` +
-    `最后更新: ${timeString}`;
+  panel.content = 
+  `CPU 负载: ${cpuUsage}\n` + 
+  `MEM 内存: ${memUsage}\n` +
+  `接收: ${bytesToSize(outTraffic)}\n` + 
+  `发送: ${bytesToSize(inTraffic)}\n` + 
+  `总流量: ${trafficSize}\n` + 
+  `运行时间: ${formatUptime(jsonData.uptime)}\n` + 
+  `最后更新: ${timeString}`;
 
   $done(panel);
 })().catch((e) => {
