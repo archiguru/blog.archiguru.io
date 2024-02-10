@@ -4,7 +4,7 @@
 #!URL=https://archiguru.io/surge/modules/oraclecloud.sgmodule
 
 [Panel]
-Serverinfo = script-name= Oracle Cloud,update-interval=1800
+Oracle Cloud = script-name= OracleCloudJS,update-interval=1800
 
 [Script]
-Serverinfo = type=generic,script-path=https://archiguru.io/surge/script/serverinfo.js, argument = url=http://146.56.105.206:7124&name=Oracle Cloud&icon=desktopcomputer
+OracleCloudJS = type=generic,script-path=https://archiguru.io/surge/script/serverinfo.js, argument = url=http://146.56.105.206:7124&name=Oracle Cloud&icon=tv.fill
