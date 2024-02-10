@@ -1,0 +1,10 @@
+#!name=Oracle Cloud
+#!desc=监控Oracle Cloud流量信息和处理器、内存占用情况
+#!author=ArchiGuru
+#!URL=https://archiguru.io/surge/modules/oraclecloud.sgmodule
+
+[Panel]
+Serverinfo = script-name= Serverinfo,update-interval=1800
+
+[Script]
+Serverinfo = type=generic,script-path=https://raw.gitmirror.com/getsomecat/GetSomeCats/Surge/script/serverinfo.js, argument = url=http://127.0.0.1:7124&name=Server Info&icon=party.popper
