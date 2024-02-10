@@ -5,8 +5,7 @@ url：你的服务器设置的链接
 name：Panel的标题
 icon：Panel的图标
 示例：
-argument = url=http://127.0.0.1:7122&name=花里胡哨才是生产力&icon=bolt.horizontal.icloud.fill
-
+argument = url=http://127.0.0.1:7122&name=Server Info&icon=bolt.horizontal.icloud.fill
 */
 
 (async () => {
@@ -36,10 +35,10 @@ argument = url=http://127.0.0.1:7122&name=花里胡哨才是生产力&icon=bolt.
   panel.icon = params.icon || 'bolt.horizontal.icloud.fill';
   panel["icon-color"] = shifts[col];
   panel.content = `CPU:    ${cpuUsage}        |  MEM:    ${memUsage}\n` +
-    `Recv: ${bytesToSize(outTraffic)}  |  Sent: ${bytesToSize(inTraffic)}\n` +
-    `Total: ${trafficSize}\n` +
-    `Uptime: ${formatUptime(jsonData.uptime)}\n` +
-    `Last Update: ${timeString}`;
+    `接收: ${bytesToSize(outTraffic)}  |  发送: ${bytesToSize(inTraffic)}\n` +
+    `总流泪: ${trafficSize}\n` +
+    `更新时间: ${formatUptime(jsonData.uptime)}\n` +
+    `最后更新: ${timeString}`;
 
   $done(panel);
 })().catch((e) => {
