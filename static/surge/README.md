@@ -1,48 +1,125 @@
-# Surge 配置文件和模块
+# Surge 配置模块使用说明
 
-> 这个仓库包含了一些 Surge 的配置文件和模块。
-> 花样字体生成： https://qwerty.dev/fancy-font-generator/
-> 机场转义𝐄𝐍𝐂𝐎𝐃𝐄： https://www.urlencoder.org
+## iOS 专用模块
 
-## 配置文件
+### 00_ios_general_enhanced.sgmodule
 
-- [iOS-Surge.conf](https://archiguru.io/surge/iOS-Surge.conf): 适用于 iOS 平台的 Surge 配置文件。
-- [iOS-Surge-Dev.conf](https://archiguru.io/surge/iOS-Surge-Dev.conf): iOS 平台的 Surge 开发版配置文件。
-- [macOS-Surge.conf](https://archiguru.io/surge/macOS-Surge.conf): 适用于 macOS 平台的 Surge 配置文件。
-- [Loon-Pro.conf](https://archiguru.io/surge/Loon-Pro.conf): 适用于 Loon Pro 的配置文件。
+- **描述：** 通用增强模块，提供了一些常用的增强功能。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/00_ios_general_enhanced.sgmodule
+    ```
 
-## 模块
+### 01_ios_additional_rules.sgmodule
 
-- [Sub-Store](https://archiguru.io/surge/modules/substore.sgmodule): Sub-Store 模块。
+- **描述：** 提供了额外的规则配置功能，用于自定义网络规则。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/01_ios_additional_rules.sgmodule
+    ```
 
-- [Sub-Store Sync](https://archiguru.io/surge/modules/substoresync.sgmodule): 用于 Surge 的 Substore 同步模块。
+### 02_ios_header_rewrite.sgmodule
 
-- [BoxJs](https://archiguru.io/surge/modules/boxjs.sgmodule): BoxJS 模块。
+- **描述：** 可以重写请求头的模块，用于修改 HTTP 请求的头部信息。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/02_ios_header_rewrite.sgmodule
+    ```
 
-- [监控 Oracle Cloud](https://archiguru.io/surge/modules/oraclecloud.sgmodule): Oracle Cloud 模块。
+### 03_ios_youtube_ads.sgmodule
 
-- [wifi-suspend.sgmodule](https://archiguru.io/surge/modules/wifi-suspend.sgmodule): WiFi 暂停模块。
+- **描述：** 用于屏蔽 YouTube 视频中的广告。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/03_ios_youtube_ads.sgmodule
+    ```
 
-## 脚本
+### 04_ios_sub_store.sgmodule
 
-- [serverinfo.js](https://archiguru.io/surge/script/serverinfo.js): 服务器信息脚本。
+- **描述：** 提供了一个 Sub Store 功能，用于订阅和管理其他 Surge 规则集。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/04_ios_sub_store.sgmodule
+    ```
 
-## 使用 Surge 模块
+### 05_ios_boxjs.sgmodule
 
-您可以通过以下 URL 使用 Surge 模块：
-- [https://archiguru.io/surge/modules/substoresync.sgmodule](https://archiguru.io/surge/modules/substoresync.sgmodule)
+- **描述：** BoxJS 模块，用于运行 JavaScript 脚本。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/05_ios_boxjs.sgmodule
+    ```
 
+### 09_ios_wifi_auto_suspend.sgmodule
 
+- **描述：** 自动暂停 Wi-Fi 功能的模块。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/09_ios_wifi_auto_suspend.sgmodule
+    ```
 
+### 10_ios_auto_switch_direct.sgmodule
 
-# > 花样字体生成： https://qwerty.dev/fancy-font-generator/
-# > 机场转义𝐄𝐍𝐂𝐎𝐃𝐄： https://www.urlencoder.org
+- **描述：** 自动切换 Direct 模式的模块。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/10_ios_auto_switch_direct.sgmodule
+    ```
 
+### 21_ios_panel_oracle_monitor.sgmodule
 
+- **描述：** Oracle 监控面板模块。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/21_ios_panel_oracle_monitor.sgmodule
+    ```
 
-; 🇭🇰 香港节点
-; 🇨🇳 台湾节点
-; 🇸🇬 新加坡节点
-; 🇰🇷 韩国节点
-; 🇯🇵 日本节点
-; 🇺🇲 美国节点
+### 22_ios_panel_flush-dns.sgmodule
+
+- **描述：** 清除 DNS 缓存的模块。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/ios/22_ios_panel_flush-dns.sgmodule
+    ```
+
+## macOS 专用模块
+
+### 00_mac_general_enhanced.sgmodule
+
+- **描述：** 通用增强模块，提供了一些常用的增强功能。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/mac/00_mac_general_enhanced.sgmodule
+    ```
+
+### 01_mac_additional_rules.sgmodule
+
+- **描述：** 提供了额外的规则配置功能，用于自定义网络规则。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/mac/01_mac_additional_rules.sgmodule
+    ```
+
+### 02_mac_header_rewrite.sgmodule
+
+- **描述：** 可以重写请求头的模块，用于修改 HTTP 请求的头部信息。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/mac/02_mac_header_rewrite.sgmodule
+    ```
+
+### 03_mac_boxjs.sgmodule
+
+- **描述：** BoxJS 模块，用于运行 JavaScript 脚本。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/mac/03_mac_boxjs.sgmodule
+    ```
+
+### 04_mac_sub_store.sgmodule
+
+- **描述：** 提供了一个 Sub Store 功能，用于订阅和管理其他 Surge 规则集。
+- **下载链接：** 
+    ```plaintext
+    https://archiguru.io/surge/modules/mac/04_mac_sub_store.sgmodule
+    ```
