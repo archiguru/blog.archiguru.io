@@ -1,7 +1,7 @@
 #!name=Additional Rule
-#!desc=(🖥️ macOS / 📱 iOS版) 附加规则
+#!desc=📱 iOS版 - 附加规则
 #!system=ios,macos
-#!URL=https://archiguru.io/surge/modules/macos_ios_additional_rules.sgmodule
+#!URL=https://archiguru.io/surge/modules/ios/01_ios_additional_rules.sgmodule
 
 [Rule]
 # >> 顶级域名分流

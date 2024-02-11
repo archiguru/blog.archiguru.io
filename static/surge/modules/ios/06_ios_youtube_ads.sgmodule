@@ -1,6 +1,6 @@
 #!name=Youtube (Music) Enhance
-#!desc=(📱 iOS版) 适用于 Youtube & Youtube Music (IOS >= 15)
-#!URL=https://archiguru.io/surge/modules/ios_youtube_ads.sgmodule
+#!desc=📱 iOS版 - 适用于 Youtube & Youtube Music (IOS >= 15)
+#!URL=https://archiguru.io/surge/modules/ios/06_ios_youtube_ads.sgmodule
 
 # > Feature
 # - 删除 Youtube (Music) 广告

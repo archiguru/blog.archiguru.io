@@ -1,8 +1,8 @@
 #!name=WiFi Auto Suspend
-#!desc=(📱 iOS版) 公司特定 WiFi ，Surge 自动挂起
+#!desc=📱 iOS版 - 公司特定 WiFi ，Surge 自动挂起
 #!icon=https://archiguru.io/surge/img/antgroup.png
 #!system=ios
-#!URL=https://archiguru.io/surge/modules/ios_wifi_auto_suspend.sgmodule
+#!URL=https://archiguru.io/surge/modules/ios/07_ios_wifi_auto_suspend.sgmodule
 
 [SSID Setting]
 antgroup-inc suspend=true

@@ -1,7 +1,9 @@
 #!name=General Enhanced
-#!desc=(🖥️ macOS版) Surge 功能增强
+#!desc=💻 macOS - Surge 功能增强
 #!system=mac
-#!URL=https://archiguru.io/surge/modules/macos_general_enhanced.sgmodule
+#!URL=https://archiguru.io/surge/modules/mac/00_mac_general_enhanced.sgmodule
+
+surge/modules/mac/00_mac_general_enhanced.sgmodule
 
 [General]
 # > 跳过代理

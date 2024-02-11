@@ -1,7 +1,7 @@
 #!name=Header Rewrite
-#!desc=(🖥️ macOS / 📱 iOS版) 自定义 Header Rewrite
-#!system=ios,macos
-#!URL=https://archiguru.io/surge/modules/macos_ios_header_rewrite.sgmodule
+#!desc=💻 macOS - 自定义 Header Rewrite
+#!system=mac
+#!URL=https://archiguru.io/surge/modules/mac/02_mac_header_rewrite.sgmodule
 
 [Header Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）By zZPiglet

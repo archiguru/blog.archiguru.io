@@ -1,0 +1,8 @@
+#!name=Auto Switch Direct
+#!desc=适配所有网络, 自动挂起 Surge
+#!system=ios
+#!URL=https://archiguru.io/surge/modules/ios/08_auto_switch_direct.sgmodule
+
+[SSID Setting]
+"TYPE:CELLULAR" suspend=true
+"TYPE:WIFI" suspend=true

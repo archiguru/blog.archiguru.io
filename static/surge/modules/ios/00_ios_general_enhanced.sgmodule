@@ -1,7 +1,7 @@
 #!name=General Enhanced
-#!desc=(📱 iOS版) Surge 功能增强
+#!desc=📱 iOS版 - Surge 功能增强
 #!system=ios
-#!URL=https://archiguru.io/surge/modules/ios_general_enhanced.sgmodule
+#!URL=https://archiguru.io/surge/modules/ios/00_ios_general_enhanced.sgmodule
 
 [General]
 # > 跳过代理
