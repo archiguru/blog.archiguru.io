@@ -1,0 +1,10 @@
+#!name=Oracle Monitor
+#!desc=(📱 iOS版) 监控 Oracle Server 流量信息和处理器、内存占用情况
+#!system=ios
+#!URL=https://archiguru.io/surge/modules/ios_oracle_monitor.sgmodule
+
+[Panel]
+Oracle Monitor = script-name= Oracle Monitor,update-interval=1800
+
+[Script]
+Oracle Monitor = type=generic,script-path=https://archiguru.io/surge/script/serverinfo.js, argument = url=http://146.56.105.206:7124&name=Oracle Monitor&icon=xserve
