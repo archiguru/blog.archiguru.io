@@ -7,4 +7,4 @@
 Oracle Cloud = script-name= OracleCloudJS,update-interval=1800
 
 [Script]
-OracleCloudJS = type=generic,script-path=https://archiguru.io/surge/script/serverinfo.js, argument = url=http://146.56.105.206:7124&name=Oracle Cloud&icon=tv.fill
+OracleCloudJS = type=generic,script-path=https://archiguru.io/surge/script/serverinfo.js, argument = url=http://146.56.105.206:7124&name=Oracle Cloud&icon=xserve

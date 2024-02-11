@@ -35,8 +35,8 @@ argument = url=http://127.0.0.1:7122&name=Server Info&icon=bolt.horizontal.iclou
   panel.icon = params.icon || 'bolt.horizontal.icloud.fill';
   panel["icon-color"] = shifts[col];
   panel.content = 
-  `CPU:    ${cpuUsage}        |  MEM:    ${memUsage}\n` +
-  `接收: ${bytesToSize(outTraffic)}    |  发送: ${bytesToSize(inTraffic)}\n` + 
+  `CPU:    ${cpuUsage}            |  MEM:    ${memUsage}\n` +
+  `接收: ${bytesToSize(outTraffic)}   |  发送: ${bytesToSize(inTraffic)}\n` + 
   `总流量: ${trafficSize}\n` + 
   `运行时间: ${formatUptime(jsonData.uptime)}\n` + 
   `最后更新: ${timeString}`;
