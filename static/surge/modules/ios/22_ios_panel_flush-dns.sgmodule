@@ -1,0 +1,10 @@
+#!name=22. Panel - Flush DNS
+#!desc=📱 iOS版 - 快速清除 Surge DNS 缓存
+#!system=ios
+#!URL=https://archiguru.io/surge/modules/ios/22_ios_panel_flush-dns.sgmodule
+
+[Panel]
+FlushDNS = script-name=FlushDNS,update-interval=600
+
+[Script]
+FlushDNS = type=generic,timeout=10,script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color= #afe59a&server=false

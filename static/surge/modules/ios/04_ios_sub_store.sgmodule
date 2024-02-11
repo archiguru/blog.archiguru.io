@@ -1,7 +1,7 @@
-#!name=Sub Store
+#!name=04. Sub Store
 #!desc=📱 iOS版 - 高级订阅管理工具, 带 ability 参数版本
 #!system=ios
-#!URL=https://archiguru.io/surge/modules/ios/03_ios_sub_store.sgmodule
+#!URL=https://archiguru.io/surge/modules/ios/04_ios_sub_store.sgmodule
 
 [MITM]
 hostname = %APPEND% sub.store

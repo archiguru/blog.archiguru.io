@@ -1,7 +1,7 @@
-#!name=Oracle Monitor
+#!name=21. Panel - Oracle Monitor
 #!desc=📱 iOS版 - 监控 Oracle Server 流量信息和处理器、内存占用情况
 #!system=ios
-#!URL=https://archiguru.io/surge/modules/ios/05_ios_oracle_monitor.sgmodule
+#!URL=https://archiguru.io/surge/modules/ios/21_ios_panel_oracle_monitor.sgmodule
 
 [Panel]
 "Oracle Monitor" = script-name=Oracle Monitor, update-interval=1800

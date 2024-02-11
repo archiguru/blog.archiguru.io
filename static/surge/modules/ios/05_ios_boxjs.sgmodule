@@ -1,7 +1,8 @@
-#!name=BoxJs
+#!name=05. BoxJs
 #!desc=📱 iOS版 - BoxJs (http://boxjs.com)
 #!system=ios
-#!URL=https://archiguru.io/surge/modules/ios/04_ios_boxjs.sgmodule
+#!icon=https://archiguru.io/surge/img/boxjs.png
+#!URL=https://archiguru.io/surge/modules/ios/05_ios_boxjs.sgmodule
 
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
