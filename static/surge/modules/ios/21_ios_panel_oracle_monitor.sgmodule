@@ -7,4 +7,4 @@
 "Oracle Monitor" = script-name=Oracle Monitor, update-interval=1800
 
 [Script]
-"Oracle Monitor" = type=generic, script-path=https://archiguru.io/surge/script/serverinfo.js, argument = "url=http://146.56.105.206:7124&name=Oracle Monitor&icon=xserve"
+"Oracle Monitor" = type=generic, script-path=https://archiguru.io/surge/script/serverinfo.js, argument = "url=http://158.179.163.120:7124&name=Oracle Monitor&icon=xserve"
