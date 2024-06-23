@@ -1,4 +1,4 @@
-baseURL = "https://archiguru.io"
+baseURL = "https://blog.archiguru.io"
 theme = "LoveIt"
 title = "ArchiGuru - The sooner you start to code, the longer the program will take"
 defaultContentLanguage = "zh-cn"
